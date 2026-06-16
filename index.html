@@ -521,24 +521,22 @@
             ];
             
             let anniversaryIndex = 0;
-            
+                        
             setInterval(() => {
             
-            ```
-            const img = document.getElementById("anniversary-slideshow");
+                const img = document.getElementById("anniversary-slideshow");
             
-            if (!img) return;
+                if (!img) return;
             
-            anniversaryIndex =
-                (anniversaryIndex + 1) % anniversaryImages.length;
+                anniversaryIndex =
+                    (anniversaryIndex + 1) % anniversaryImages.length;
             
-            img.style.opacity = 0;
+                img.style.opacity = 0;
             
-            setTimeout(() => {
-                img.src = anniversaryImages[anniversaryIndex];
-                img.style.opacity = 1;
-            }, 300);
-            ```
+                setTimeout(() => {
+                    img.src = anniversaryImages[anniversaryIndex];
+                    img.style.opacity = 1;
+                }, 300);
             
             }, 2000);
 
