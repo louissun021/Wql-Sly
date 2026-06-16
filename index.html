@@ -52,6 +52,7 @@
                 <div class="nav-dot" data-page="9" data-date="Dec 21, 2023" onclick="goToPage(9)"></div>
                 <div class="nav-dot" data-page="10" data-date="Jun 20, 2024" onclick="goToPage(10)"></div>
                 <div class="nav-dot" data-page="11" data-date="Dec 23, 2024" onclick="goToPage(11)"></div>
+                <div class="nav-dot" data-page="12" data-date="Jan 27, 2025" onclick="goToPage(12)"></div>
             </div>
         </nav>
 
@@ -313,12 +314,61 @@
             </div>
         </div>
 
+        <div class="page" id="page-12">
+        <div class="page-content">
+        
+            <div class="timeline-content">
+        
+                <div class="timeline-date">
+                    Jan 27, 2025
+                </div>
+        
+                <h2 class="timeline-title">
+                    Celebrate 6th Anniversay
+                </h2>
+        
+                <div class="image-container">
+        
+                    <img
+                        id="anniversary-slideshow"
+                        src="2025_01_20.jpg"
+                        class="timeline-img"
+                    >
+        
+                    <div class="nav-buttons">
+        
+                        <button class="nav-btn prev-btn"
+                                onclick="prevPage()">
+                            <i class="fas fa-arrow-circle-left"></i>
+                        </button>
+        
+                        <button class="nav-btn next-btn"
+                                onclick="nextPage()"
+                                disabled>
+                            <i class="fas fa-arrow-circle-right"></i>
+                        </button>
+        
+                    </div>
+        
+                </div>
+        
+                <p>
+                    庆祝六周年，一起去加州迪士尼，还是没有看到烟花，
+                    好像是从这一年开始，每次纪念日都想去牛排馆。
+                </p>
+        
+            </div>
+        
+        </div>
+
+
+        
         <audio id="backgroundMusic" src="G.E.M.邓紫棋-多远都要在一起.mp3"></audio>
         <audio id="oldMusic" src="周杰伦 - 爱在西元前.mp3"></audio>
 
         <script>
             let currentPage = 0;
-            const totalPages = 12;
+            const totalPages = 13;
             let isAnimating = false;
 
             let currentAudio = null;  // Keep track of the currently playing audio
@@ -464,6 +514,34 @@
                     document.querySelector('.blur-overlay').style.display = 'none';
                 });
             });
+                        const anniversaryImages = [
+            "2025_01_20.jpg",
+            "2025_01_21.jpg",
+            "2025_01_27.jpg"
+            ];
+            
+            let anniversaryIndex = 0;
+            
+            setInterval(() => {
+            
+            ```
+            const img = document.getElementById("anniversary-slideshow");
+            
+            if (!img) return;
+            
+            anniversaryIndex =
+                (anniversaryIndex + 1) % anniversaryImages.length;
+            
+            img.style.opacity = 0;
+            
+            setTimeout(() => {
+                img.src = anniversaryImages[anniversaryIndex];
+                img.style.opacity = 1;
+            }, 300);
+            ```
+            
+            }, 2000);
+
         </script>
     </div>
 </body>
