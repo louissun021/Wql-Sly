@@ -131,24 +131,24 @@ h1 {
 }
 
 .image-container {
-    position: relative;
-    width: 80%;
-    max-width: 600px;
-    margin: 0 auto;
-    padding: 15px 40px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+position: relative;
+width: 100%;
+margin: 0 auto;
+padding: 15px 0;
+display: flex;
+justify-content: center;
 }
 
 .timeline-img {
 display: block;
 width: auto;
-max-width: 100%;
 height: auto;
-max-height: 60vh;
+
+max-width: 100%;
+max-height: 70vh;
+
 margin: 0 auto;
-object-fit: contain;
+
 }
 
 .timeline-content {
