@@ -330,13 +330,46 @@ h1 {
 }
 
 @media screen and (max-width: 768px) {
-    .image-container {
-        width: 90%;
-        padding: 10px 30px;
+
+    .container {
+        padding: 20px 10px;
     }
 
-    .timeline-img {
-        max-height: 40vh;  /* Adjust max height for mobile */
+    h1 {
+        font-size: 1.25rem;
+        white-space: nowrap;
+        letter-spacing: 1px;
+    }
+
+    .names {
+        font-size: 0.9rem;
+    }
+
+    .timeline-nav {
+        overflow-x: auto;
+        overflow-y: hidden;
+        -webkit-overflow-scrolling: touch;
+        margin-bottom: 20px;
+    }
+
+    .timeline-nav::-webkit-scrollbar {
+        display: none;
+    }
+
+    .timeline-nav-inner {
+        min-width: 750px;
+        padding: 0 20px;
+        background: rgba(255, 105, 180, 0.3);
+    }
+
+    .nav-dot::after {
+        font-size: 0.55rem;
+        top: -18px;
+    }
+
+    .nav-dot {
+        width: 8px;
+        height: 8px;
     }
 
     .timeline-content {
@@ -344,49 +377,49 @@ h1 {
     }
 
     .timeline-title {
-        font-size: 1.1rem;
+        font-size: 1.8rem;
     }
 
-    .timeline-description {
-        font-size: 0.8rem;
+    .timeline-date {
+        font-size: 0.9rem;
+    }
+
+    .timeline-content p {
+        font-size: 1.2rem;
+    }
+
+    .image-container {
+        width: 100%;
+        max-width: 100%;
+        padding: 10px;
+    }
+
+    .timeline-img {
+        width: 100%;
+        max-height: 45vh;
+        object-fit: contain;
+    }
+
+    .nav-btn {
+        width: 40px;
+        height: 40px;
     }
 
     .nav-btn i {
         font-size: 2rem;
     }
 
-    .nav-buttons {
-        padding: 0 10px;
-    }
-
     .nav-btn.prev-btn {
-        left: -40px;
+        margin-left: -5px;
     }
 
     .nav-btn.next-btn {
-        right: -40px;
-    }
-
-    .timeline-nav {
-        top: 0;
-    }
-
-    .timeline-nav-inner {
-        padding: 0 10px;
-        background: rgba(255, 105, 180, 0.3);  /* Adjust for mobile */
-    }
-
-    .nav-dot::after {
-        top: -20px;
-        font-size: 0.6rem;
-        padding: 1px 3px;
+        margin-right: -5px;
     }
 
     .book {
         margin-top: 10px;
+        min-height: 650px;
     }
 
-    .timeline-nav {
-        margin-bottom: 20px;  /* Slightly less on mobile */
-    }
 }
